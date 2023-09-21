@@ -1,0 +1,95 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 4px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: linear-gradient(45deg, #433ca0, #4dc2c9);
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.number-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.one {
+	position: relative;
+	width: 25px;
+	height: 100px;
+	background-color: #fff;
+	border-radius: 3px;
+	box-shadow: 0px 0px 5px #aaa;
+	left: 10px;
+}
+
+.one::before {
+	content: "";
+	position: absolute;
+	display: block;
+	width: 25px;
+	height: 40px;
+	border-radius: 3px;
+	background-color: #fff;
+	transform: translate(-15px, 2px) rotate(45deg);
+	z-index: -1;
+}
+
+.zero {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	border: 25px solid #fff;
+	box-shadow: 0px 0px 5px #aaa;
+	z-index: -1;
+}
+
+.zero:last-child {
+	transform: translatex(-15px);
+	z-index: -2;
+}
+
+.text-container {
+	width: 95%;
+	margin: auto;
+}
+
+.days {
+	font-family: 'Courier New', monospace;
+	font-size: 5.4rem;
+	font-weight: 600;
+	color: #fff;
+	line-height: 4.5rem;
+}
+
+.challenge {
+	font-family: 'Courier New', monospace;
+	font-weight: bold;
+	font-size: 1.6rem;
+	line-height: 1rem;
+	color: #fff;
+}
